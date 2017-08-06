@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    font: 16px/20px '宋体'; /*16px表示字号，20px表示行距*/
+}
+#box{
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    /*border: 1px solid black;*/
+}
+#box .show{
+    background-color: mediumvioletred;
+    line-height: 30px;
+    padding: 5px;
+}
+.show strong{
+    color: #fff;
+    vertical-align: middle;  /*垂直对齐*/
+}
+.show span{
+    vertical-align: middle;
+    width: 200px;
+    height: 26px;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #999;
+    text-indent: 20px;
+    cursor: pointer;
+}
+.show .span i{
+    height: 0;
+    width: 0;
+    border-top: 7px solid black;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+/*点击后，i加class*/
+.show .spanAdd{
+    color: #999;
+}
+.show .spanAdd i{
+    height: 0;
+    width: 0;
+    border-bottom: 7px solid black;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#box .list{
+    border: 1px solid #dfdfdf;
+    border-top: none;
+    display: none;
+}
+#box .list li{
+    height: 30px;
+    line-height: 30px;
+    text-indent: 80px;
+    list-style: none;
+    border-bottom: 1px solid #dfdfdf;
+    cursor: pointer;
+}
+#box .list li:hover{
+    background: #dfdfdf;
+}
