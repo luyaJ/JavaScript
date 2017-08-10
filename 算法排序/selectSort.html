@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>selectSort--选择排序</title>
+</head>
+<body>
+<script>
+    function selectSort(array) {
+        for(var i=0;i<array.length;i++){
+            var min = array[i];
+            for(var j = i+1;j<array.length-1;j++){
+                if(min > array[j]){
+                    var temp = min;
+                    min = array[j];
+                    array[j] = temp;
+                }
+            }
+            array[i] = min;
+        }
+        return array;
+    }
+    var array = [53,27,36,15,69,42];
+    document.write("before: " + array + "<br>");
+    selectSort(array);
+    document.write("after: " + array);
+</script>
+</body>
+</html>

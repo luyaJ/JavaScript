@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bubbleSort--冒泡排序</title>
+</head>
+<body>
+<script>
+    /**冒泡排序**/
+//    function bubbleSort(array){
+//        for(var i=0;i<array.length;i++){
+//            for(var j=array.length-1;j>i;j--){
+//                if(array[j] < array[j-1]){  //使较小的元素浮在上面
+//                    var temp = array[j-1];
+//                    array[j-1] = array[j];
+//                    array[j] = temp;
+//                }
+//            }
+//        }
+//        return array;
+//    }
+    /**改进的冒泡排序**/
+    function bubbleSort(array){
+        for(var i=0;i<array.length;i++){
+            var exchange = 0;
+            for(var j=array.length-1;j>i;j--){
+                if(array[j] < array[j-1]){  //使较小的元素浮在上面
+                    var temp = array[j-1];
+                    array[j-1] = array[j];
+                    array[j] = temp;
+                    exchange = 1;
+                }
+            }
+            if(!exchange) return array;
+        }
+        return array;
+    }
+    var array = [53,27,36,15,69,42];
+    document.write("before: " + array + "<br>");
+    bubbleSort(array);
+    document.write("after: " + array);
+</script>
+</body>
+</html>

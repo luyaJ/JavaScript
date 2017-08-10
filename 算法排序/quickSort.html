@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>quickSort--快速排序</title>
+</head>
+<body>
+<script>
+    var array = [36,53,27,20,15,69,42];
+    document.write("before: " + array + "<br>");
+    function quickSort(array){
+        if (array.length <= 1) {return array};
+        var pivotIndex = Math.floor(array.length / 2);  //pivot基准
+        var pivot = array.splice(pivotIndex,1);
+        var left = [];
+        var right = [];
+        for (var i = 0; i < array.length; i++){
+            if(array[i] < pivot) {
+                left.push(array[i]);
+            } else {
+                right.push(array[i]);
+            }
+        }
+        return quickSort(left).concat([pivot],quickSort(right));
+    }
+    document.write("after: " + quickSort(array));
+</script>
+</body>
+</html>
