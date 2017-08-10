@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IMAGE</title>
+	<script type="text/javascript" src="gallery.js"></script>
+</head>
+<style type="text/css">
+	body{
+		font-family: "Helvetica","Arial",serif;
+		background-color: #ccc;
+		margin: 1em 10%;
+	}
+	a{
+		color: #c60;
+		text-decoration: none;
+		background-color: transparent; /*transparent：背景颜色透明*/
+		font-weight: bold;
+	}
+	ul{
+		padding: 0;
+	}
+	li{
+		padding: 1.5em;
+		float: left;
+		list-style: none;
+	}
+	img{
+		display: block;
+		clear: both;/*这个样式主要是用于对多个div浮动的清除，如float:left,如果不清除，很容易对下面的div造成显示错位*/
+		height: 400px;
+		width: 600px;
+	}
+</style>
+<body>
+	<h1>Snapshots</h1>
+	<ul id="imagegallery">
+		<li><a href="img/1.jpg" title="fire with man" onclick="showPic(this);return false;">FireMan</a></li> <!-- this表示“这个<a>元素节点” return flase:防止用户被带到目标链接窗口 -->
+		<li><a href="img/2.jpg" title="woman" onclick="showPic(this);return false;">Woman</a></li>
+		<li><a href="img/3.jpg" title="beauty woman" onclick="showPic(this);return false;">BeautyWoman</a></li>
+		<li><a href="img/4.jpg" title="fire" onclick="showPic(this);return false;">Fire</a></li>
+	</ul>
+	<img id="placeholder" src="img/kl.png" alt="my image gallery">
+	<p id="description">Choose an image.</p>
+</body>
+</html>
