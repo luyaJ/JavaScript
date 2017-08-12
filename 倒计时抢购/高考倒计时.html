@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高考倒计时</title>
+</head>
+<body>
+<div id="time">高考倒计时：<span></span>天</div>
+<script>
+    window.onload = function () {
+        var now = new Date();
+        var endtime = new Date("2017,8,15");
+//        var lefttime = parseInt((endtime - now) / (1000*60*60*24));
+        var lefttime = Math.ceil((endtime - now) / (1000*60*60*24)); //向上取整
+        document.getElementsByTagName("span")[0].innerHTML = lefttime;
+    }
+</script>
+</body>
+</html>

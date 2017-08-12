@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>限时抢</title>
+</head>
+<body>
+<div>抢购倒计时：<p></p></div>
+<script>
+    window.onload = function () {
+        showTime();
+    }
+
+    function showTime(){
+        var now = new Date(); //当前时间
+        var endtime = new Date("2018/8/12,16:16:16"); //结束时间
+        var lefttime = parseInt((endtime.getTime() - now.getTime())); //getTime获取毫秒
+
+        var day = parseInt(lefttime / (1000*60*60*24));
+        var hour = parseInt(lefttime / (1000*60*60) % 24);
+        var minutes = parseInt(lefttime / (1000*60) % 60);
+        var seconds = parseInt(lefttime / (1000) % 60);
+
+        setTimeout(function () {
+            showTime();
+        },500);
+
+        document.getElementsByTagName("p")[0].innerHTML = day + " 天 " + hour + " 时 " + minutes + " 分 " + seconds + " 秒";
+    }
+</script>
+</body>
+</html>
