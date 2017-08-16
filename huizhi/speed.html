@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>速度动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            height: 200px;
+            width: 200px;
+            background: #9a1ace;
+            left: -200px;
+            position: relative;
+        }
+        #btn{
+            height: 60px;
+            width: 30px;
+            background: #CE639C;
+            top: 75px;
+            position: absolute;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <span id="btn"></span>
+</div>
+<script>
+    window.onload = function(){
+        var container=document.getElementById('container');
+        var btn=document.getElementById('btn');
+        btn.onclick = function(){
+            if(container.offsetLeft == -200) {
+                moveOut();
+            } else {
+                moveBack();
+            }
+        };
+    };
+    var timer=null;
+    function moveOut(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+            if(container.offsetLeft == 0) {
+                clearInterval(timer);
+            } else {
+                container.style.left = container.offsetLeft + 10 + 'px';
+            }
+        },30);
+    }
+
+    function moveBack(){
+        clearInterval(timer);
+        timer = setInterval(function(){
+            if(container.offsetLeft == -200){
+                clearInterval(timer);
+            } else {
+                container.style.left = container.offsetLeft + (-10) +'px';
+            }
+        },30);
+    }
+</script>
+</body>
+</html>

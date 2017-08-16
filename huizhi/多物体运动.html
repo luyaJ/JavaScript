@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多物体运动</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #container ul li
+        {
+            width: 200px;
+            height: 100px;
+            margin-top:50px;
+            background-color: sandybrown;
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    window.onload = function(){
+        var list = document.getElementsByTagName('li');
+        for(var i=0 ; i<list.length ; i++){
+            var timer = null;
+            list[i].onmouseover = function (){
+                startMove(this,300);
+            }
+            list[i].onmouseout = function () {
+                startMove(this,200);
+            }
+        }
+    }
+
+    function startMove(_this,Target){
+        clearInterval(_this.timer);
+        _this.timer = setInterval(function () {
+          var speed = (Target - _this.offsetWidth) / 5;
+            speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+            if(_this.offsetWidth == Target) {
+                clearInterval(_this.timer);
+                console.log(_this.offsetWidth);
+            } else {
+                _this.style.width = _this.offsetWidth + speed + 'px';
+            }
+        },30)
+    }
+</script>
+</body>
+</html>

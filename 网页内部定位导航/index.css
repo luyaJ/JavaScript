@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#content{
+    width: 800px;
+    margin: 0 auto;
+}
+#content li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+#content img{
+    height: 150px;
+    width: 220px;
+}
+.item{
+    border: 1px dashed #ccc;
+    margin-bottom: 20px;
+}
+
+#menu{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: 400px;
+}
+#menu ul li{
+    list-style: none;
+    margin: 5px 0;
+    font-weight: bold;
+    text-align: center;
+}
+#menu ul li a{
+    text-decoration: none;
+}
+#menu ul li:hover,
+#menu ul .on{
+    background: #0088bb;
+}
+
