@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>别踩白块Game</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<!--
+每行的黑块消失就意味着--row被删除
+滑块往下滑
+-->
+<body>
+<h2>score</h2>
+<h2 id="score">0</h2>
+<div id="main">
+    <div id="con">
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell green"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell green"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell green"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell green"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    </div>
+</div>
+<button onclick="start()">开始</button>
+</body>
+</html>
