@@ -1,0 +1,66 @@
+.datePicker{
+    height: 30px;
+    line-height: 30px;
+    width: 240px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 5px;
+}
+.datePicker:focus{
+    border: 1px solid #1abc9c;
+}
+
+.ui-wrapper{
+    width: 240px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px 2px rgba(128,128,128,0.3);
+    color: #666;
+    font-size: 16px;
+    display: none;
+    position: absolute;
+}
+.ui-wrapper-show{
+    display: block;
+}
+
+.ui-wrapper .ui-header{
+    height: 50px;
+    line-height: 50px;
+    background: #f0f0f0;
+    padding: 0 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+.ui-wrapper .ui-header .ui-btn{
+    font-size: 20px;
+    line-height: 50px;
+    width: 20px;
+    height: 50px;
+    text-align: center;
+    color: #1abc9c;
+    cursor: pointer;
+    text-decoration: none;
+}
+.ui-wrapper .ui-header .ui-prev-btn{
+    float: left;
+}
+.ui-wrapper .ui-header .ui-next-btn{
+    float: right;
+}
+
+.ui-body table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.ui-body table th,
+.ui-body table td{
+    text-align: center;
+    height: 30px;
+}
+
+.ui-body table td{
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+}
