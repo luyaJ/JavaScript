@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js实现图片拖拽</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--
+    实现方法：共分为3层，第一层设置opacity，第二层clip，第三层absolute
+-->
+<body>
+    <div id="box">
+        <img id="img1" src="images/img.jpg" height="400px" width="600px"/>
+        <img id="img2" src="images/img.jpg" height="400px" width="600px"/>
+        <!-- 小的选取框 -->
+        <div id="main">
+            <div class="minDiv left-up"></div>
+            <div class="minDiv mid-up"></div>
+            <div class="minDiv right-up"></div>
+            <div id="right" class="minDiv right"></div>
+            <div class="minDiv right-bottom"></div>
+            <div class="minDiv mid-bottom"></div>
+            <div class="minDiv left-bottom"></div>
+            <div class="minDiv left"></div>
+        </div>
+    </div>
+</body>
+</html>
