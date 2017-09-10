@@ -1,0 +1,155 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 微软雅黑, 宋体;
+}
+
+
+.title{
+    height: 86px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 86px;
+}
+.clearfloat:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.select-cont{
+    width: 298px;
+    float: left;
+}
+.menu{
+    background-color: #3cb0d0;
+    width: 100%;
+    padding: 5px 5px 0;
+    color: white;
+}
+.menu>div{
+    float: left;
+    width: 144px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.select{
+    background-color: white;
+    color: black;
+}
+
+.scroll-clip{
+    width: 100%;
+    height: 253px;
+    position: relative;
+    border: 1px solid #eee;
+}
+#list,#hotel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    color: #49484b;
+    text-align: center;
+}
+#list::-webkit-scrollbar,#hotel::-webkit-scrollbar
+{
+    width: 8px;
+    height: 8px;
+    background-color: #F5F5F5;
+}
+
+#list::-webkit-scrollbar-track,#hotel::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 0px;
+    background-color: #F5F5F5;
+}
+
+
+#list::-webkit-scrollbar-thumb,#hotel::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+#list ul li{
+    display: block;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 58px;
+    border-bottom: #EEEEEE 1px solid;
+}
+#list ul li span{
+    display: block;
+}
+#list ul li div{
+    line-height: 28px;
+    margin-bottom: 10px;
+    text-align: left;
+    display: none;
+}
+#list ul li div input{
+    margin-left: 30px;
+}
+#hotel {
+    display: none;
+}
+#hotel div{
+    padding: 10px;
+}
+#hotel div dl{
+    display: block;
+    width:190px;
+    border-bottom: 1px #eee solid;
+    float: left;
+}
+#hotel div span{
+    display: block;
+    color: red;
+    float: right;
+    text-align: left;
+}
+#hotel div dl dd{
+    float: left;
+    width: 46px;
+    background-color: #f9f9f9;
+    margin-right: 8px;
+    text-align: center;
+    height: 46px;
+}
+#hotel div dl dd img{
+    width: 100%;
+    height: 100%;
+}
+#hotel div dl dt{
+    float: left;
+    text-align: left;
+    line-height: 24px;
+    width: 135px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    cursor: pointer;
+}
+#hotel div dl dt:last-child{
+    font-size: 8px;
+}
+#hotel div:hover dl dt{
+    color: #37B9FF;
+}
+#map-cont{
+    position: absolute;
+     width:380px;
+ 	 height:290px;
+    margin-left: 298px;
+}
+
+
+
+
+
