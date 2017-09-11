@@ -5,9 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>js实现图片拖拽</title>
-    <script src="index.js"></script>
+    <title>js实现图片拖拽剪切</title>
+    <script src="js/index.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 </head>
 <!--
     实现方法：共分为3层，第一层设置opacity，第二层clip，第三层absolute
@@ -18,15 +20,18 @@
         <img id="img2" src="images/img.jpg" height="400px" width="600px"/>
         <!-- 小的选取框 -->
         <div id="main">
-            <div class="minDiv left-up"></div>
-            <div class="minDiv mid-up"></div>
-            <div class="minDiv right-up"></div>
+            <div id="left-up" class="minDiv left-up"></div>
+            <div id="up" class="minDiv mid-up"></div>
+            <div id="right-up" class="minDiv right-up"></div>
             <div id="right" class="minDiv right"></div>
-            <div class="minDiv right-bottom"></div>
-            <div class="minDiv mid-bottom"></div>
-            <div class="minDiv left-bottom"></div>
-            <div class="minDiv left"></div>
+            <div id="right-down" class="minDiv right-bottom"></div>
+            <div id="down" class="minDiv mid-bottom"></div>
+            <div id="left-down" class="minDiv left-bottom"></div>
+            <div id="left" class="minDiv left"></div>
         </div>
+    </div>
+    <div id="preview">
+        <img id="img3" src="images/img.jpg" height="400px" width="600px"/>
     </div>
 </body>
 </html>

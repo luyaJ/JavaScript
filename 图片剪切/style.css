@@ -84,3 +84,13 @@ body{
     left: -4px;
     cursor: w-resize;
 }
+
+/* 图片预览 */
+#preview{
+    position: absolute;
+    top: 100px;
+    left: 830px;
+}
+#preview img{
+    position: absolute;
+}
