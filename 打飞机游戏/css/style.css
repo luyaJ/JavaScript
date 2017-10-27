@@ -1,0 +1,78 @@
+body,html{
+  height: 100%;
+}
+
+body{
+  background-image: url("../source/img/bg_1.jpg");
+  background-size: cover;
+  color: #fff;
+}
+
+.ui-index{
+  position: absolute;
+  top: 50%;
+  margin-top: -132px;
+  width: 100%;
+  display: none;
+}
+
+.ui-index h1{
+  font-size: 50px;
+  text-shadow: 2px 8px 2px #000;
+  text-align: center;
+}
+
+.btn-group .btn{
+  display: block;
+  width: 140px;
+  background: none;
+  border: 1px solid #999;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 20px;
+  margin: 0 auto 14px auto;
+  outline: none;
+}
+
+.ui-panel{
+  width: 80%;
+  background: #070808;
+  padding: 14px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  margin-top: -111px;
+  box-sizing: border-box;
+}
+
+.ui-panel button{
+  color: #fff;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background: none;
+  font-size: 18px;
+}
+
+.ui-rule{
+  display: none;
+}
+
+.setting-group{
+  list-style: none;
+  padding: 0;
+}
+
+.setting-group .setting{
+  margin-bottom: 10px;
+}
+
+.setting-group select{
+  width: 100px;
+  background: #fff;
+  margin-left: 10px;
+  border-radius: 2px;
+  line-height: 16px;
+}
